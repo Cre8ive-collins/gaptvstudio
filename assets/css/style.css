@@ -2,6 +2,7 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
+  overflow-x: hidden;
 }
 
 a {
@@ -1129,6 +1130,11 @@ section {
   color: #4f5a62;
   content: "/";
 }
+.master{
+  height: 80vh;
+  min-height: 200px;
+  width: 100vw;
+}
 
 @media (max-width: 768px) {
   .breadcrumbs .d-flex {
@@ -1140,12 +1146,15 @@ section {
   .breadcrumbs ol li {
     display: inline-block;
   }
+
+  .master{
+    height: 50vh;
+    min-height: 200px;
+    width: 100vw;
+  }
 }
-.master{
-  height: 80vh;
-  min-height: 200px;
-  width: 100vw;
-}
+
+
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
@@ -1488,9 +1497,91 @@ border-color: #111 transparent transparent transparent;
     -webkit-animation-delay: 3s;
   }
 
-
-
-
-
-/*  this is the unimportant CSS used just to layout the content  */
+  .banner-rnd {
+    position: relative;
+    display: block;
+    padding-top: 34px; /* 30px padding + .rnd-brands height */
+    padding-bottom: 30px;
+    text-align: center;
+    transition: background-color .2s;
+    background-image: url('http://aaronflynn.co.uk/img/banner-rnd-background.svg');
+    background-color: #0d0d0d;
+    background-size: calc(max(110%, 1200px));
+    background-position: center;
+    background-repeat: no-repeat;
+    .rnd-brands {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: inline-flex;
+      width: 100%;
+      [class*=brands-] {
+        flex: 1;
+        height: 4px;
+      }
+      .brands-power {
+        background-color: #858CBD;
+      }
+      .brands-lab {
+        background-color: #FAAD3B;
+      }
+      .brands-cable {
+        background-color: #F05E22;
+      }
+      .brands-connect {
+        background-color: #00B2AF;
+      }
+      .brands-components {
+        background-color: #5090CC;
+      }
+    }
+    .rnd-logo {
+      width: 100%;
+      height: auto;
+      max-width: 160px;
+      margin-bottom: 30px;
+    }
+    .rnd-strapline {
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      margin-bottom: 15px;
+    }
+    .rnd-text {
+      font-size: 1.2rem;
+      font-weight: 300;
+      line-height: 1.2;
+      margin-bottom: 15px;
+      color: #fff;
+    }
+    .rnd-btn {
+      display: inline-flex;
+      background-color: #F05E22;
+      border: 1px solid #F05E22;
+      padding: 10px 20px;
+      border-radius: 2px;
+      outline: 0;
+      overflow: hidden;
+      transition: background-color .2s, border-color .2s;
+      color: #fff;
+    }
+    &:focus,
+    &:hover {
+      text-decoration: none;
+      background-color: #000;
+      .rnd-btn {
+        background-color: #a7380c;
+        border-color: #a7380c;
+        color: #fff;
+      }
+    }
+    @media (min-width: 992px) {
+      text-align: left;
+      .rnd-text {
+        font-size: 1.4rem;
+        line-height: 1.4;
+      }
+    }
+  }
+  
 
