@@ -1390,8 +1390,8 @@ section {
 }
 .top-left {
   position: absolute;
-  top: 120px;
-  left: 120px;
+  top: 12vh;
+  left: 4vw;
 }
 
 h3 {
