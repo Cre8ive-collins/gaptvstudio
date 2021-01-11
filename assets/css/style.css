@@ -1160,8 +1160,8 @@ section {
   content: "/";
 }
 .master{
-  height: 80vh;
-  min-height: 200px;
+  /* height: 50vh; */
+  min-height: 100px;
   width: 100vw;
 }
 

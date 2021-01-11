@@ -68,7 +68,6 @@ $(window).scroll( function(){
 
 
 
-
 //Code stolen from css-tricks for smooth scrolling:
 $(function() {
   $('a[href*=#]:not([href=#])').click(function() {
