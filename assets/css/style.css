@@ -1537,11 +1537,11 @@ border-color: #111 transparent transparent transparent;
       display: inline-block;
     }
   
-    .master{
-      height: 50vh;
+    /* .master{
+      height: 10vh;
       min-height: 200px;
       width: 100vw;
-    }
+    } */
     .arrow-wrap{
       display: none;
     }
