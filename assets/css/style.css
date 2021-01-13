@@ -1165,23 +1165,7 @@ section {
   width: 100vw;
 }
 
-@media (max-width: 768px) {
-  .breadcrumbs .d-flex {
-    display: block !important;
-  }
-  .breadcrumbs ol {
-    display: block;
-  }
-  .breadcrumbs ol li {
-    display: inline-block;
-  }
 
-  .master{
-    height: 50vh;
-    min-height: 200px;
-    width: 100vw;
-  }
-}
 
 
 /*--------------------------------------------------------------
@@ -1526,91 +1510,48 @@ border-color: #111 transparent transparent transparent;
     -webkit-animation-delay: 3s;
   }
 
-  .banner-rnd {
-    position: relative;
-    display: block;
-    padding-top: 34px; /* 30px padding + .rnd-brands height */
-    padding-bottom: 30px;
-    text-align: center;
-    transition: background-color .2s;
-    background-image: url('http://aaronflynn.co.uk/img/banner-rnd-background.svg');
-    background-color: #0d0d0d;
-    background-size: calc(max(110%, 1200px));
-    background-position: center;
-    background-repeat: no-repeat;
-    .rnd-brands {
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: inline-flex;
-      width: 100%;
-      [class*=brands-] {
-        flex: 1;
-        height: 4px;
-      }
-      .brands-power {
-        background-color: #858CBD;
-      }
-      .brands-lab {
-        background-color: #FAAD3B;
-      }
-      .brands-cable {
-        background-color: #F05E22;
-      }
-      .brands-connect {
-        background-color: #00B2AF;
-      }
-      .brands-components {
-        background-color: #5090CC;
-      }
+.slidr{
+  box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.slid{
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  animation: clientslideshow 20s linear infinite
+}
+
+.slid img{
+  height: 8rem;
+  padding-right: 5rem;
+}
+  @media (max-width: 768px) {
+    .breadcrumbs .d-flex {
+      display: block !important;
     }
-    .rnd-logo {
-      width: 100%;
-      height: auto;
-      max-width: 160px;
-      margin-bottom: 30px;
+    .breadcrumbs ol {
+      display: block;
     }
-    .rnd-strapline {
-      width: 100%;
-      max-width: 800px;
-      height: auto;
-      margin-bottom: 15px;
+    .breadcrumbs ol li {
+      display: inline-block;
     }
-    .rnd-text {
-      font-size: 1.2rem;
-      font-weight: 300;
-      line-height: 1.2;
-      margin-bottom: 15px;
-      color: #fff;
+  
+    .master{
+      height: 50vh;
+      min-height: 200px;
+      width: 100vw;
     }
-    .rnd-btn {
-      display: inline-flex;
-      background-color: #F05E22;
-      border: 1px solid #F05E22;
-      padding: 10px 20px;
-      border-radius: 2px;
-      outline: 0;
-      overflow: hidden;
-      transition: background-color .2s, border-color .2s;
-      color: #fff;
+    .arrow-wrap{
+      display: none;
     }
-    &:focus,
-    &:hover {
-      text-decoration: none;
-      background-color: #000;
-      .rnd-btn {
-        background-color: #a7380c;
-        border-color: #a7380c;
-        color: #fff;
-      }
-    }
-    @media (min-width: 992px) {
-      text-align: left;
-      .rnd-text {
-        font-size: 1.4rem;
-        line-height: 1.4;
-      }
+
+    .carousel-control-next-icon{
+      display: none;
     }
   }
-  
 
+  @keyframes clientslideshow {
+    0% {transform: translateX(0);}
+    100% {transform: translateX(-100%);}
+  }
